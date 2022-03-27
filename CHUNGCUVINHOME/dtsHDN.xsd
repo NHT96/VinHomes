@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsHDN" targetNamespace="http://tempuri.org/dtsHDN.xsd" xmlns:mstns="http://tempuri.org/dtsHDN.xsd" xmlns="http://tempuri.org/dtsHDN.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CCVINHOMEConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CCVINHOMEConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CHUNGCUVINHOME.Properties.Settings.GlobalReference.Default.CCVINHOMEConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CTHDNTableAdapter" GeneratorDataComponentClassName="CTHDNTableAdapter" Name="CTHDN" UserDataComponentName="CTHDNTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CCVINHOMEConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        c.MACH, c.MAHDNUOC, q.NGAYCHOT, q.CHISONUOC, c.TONGLNTT, c.DONGIANUOC, c.THANHTIEN
+FROM            QLNUOC AS q INNER JOIN
+                         CTHDN AS c ON c.MAHDNUOC = q.MAHDNUOC
+ORDER BY c.MACH</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MACH" DataSetColumn="MACH" />
+              <Mapping SourceColumn="MAHDNUOC" DataSetColumn="MAHDNUOC" />
+              <Mapping SourceColumn="DONGIANUOC" DataSetColumn="DONGIANUOC" />
+              <Mapping SourceColumn="TONGLNTT" DataSetColumn="TONGLNTT" />
+              <Mapping SourceColumn="THANHTIEN" DataSetColumn="THANHTIEN" />
+              <Mapping SourceColumn="NGAYCHOT" DataSetColumn="NGAYCHOT" />
+              <Mapping SourceColumn="CHISONUOC" DataSetColumn="CHISONUOC" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsHDN" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtsHDN" msprop:Generator_UserDSName="dtsHDN">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CTHDN" msprop:Generator_TableClassName="CTHDNDataTable" msprop:Generator_TableVarName="tableCTHDN" msprop:Generator_TablePropName="CTHDN" msprop:Generator_RowDeletingName="CTHDNRowDeleting" msprop:Generator_RowChangingName="CTHDNRowChanging" msprop:Generator_RowEvHandlerName="CTHDNRowChangeEventHandler" msprop:Generator_RowDeletedName="CTHDNRowDeleted" msprop:Generator_UserTableName="CTHDN" msprop:Generator_RowChangedName="CTHDNRowChanged" msprop:Generator_RowEvArgName="CTHDNRowChangeEvent" msprop:Generator_RowClassName="CTHDNRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MACH" msprop:Generator_ColumnVarNameInTable="columnMACH" msprop:Generator_ColumnPropNameInRow="MACH" msprop:Generator_ColumnPropNameInTable="MACHColumn" msprop:Generator_UserColumnName="MACH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MAHDNUOC" msprop:Generator_ColumnVarNameInTable="columnMAHDNUOC" msprop:Generator_ColumnPropNameInRow="MAHDNUOC" msprop:Generator_ColumnPropNameInTable="MAHDNUOCColumn" msprop:Generator_UserColumnName="MAHDNUOC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DONGIANUOC" msprop:Generator_ColumnVarNameInTable="columnDONGIANUOC" msprop:Generator_ColumnPropNameInRow="DONGIANUOC" msprop:Generator_ColumnPropNameInTable="DONGIANUOCColumn" msprop:Generator_UserColumnName="DONGIANUOC" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TONGLNTT" msprop:Generator_ColumnVarNameInTable="columnTONGLNTT" msprop:Generator_ColumnPropNameInRow="TONGLNTT" msprop:Generator_ColumnPropNameInTable="TONGLNTTColumn" msprop:Generator_UserColumnName="TONGLNTT" type="xs:int" minOccurs="0" />
+              <xs:element name="THANHTIEN" msprop:Generator_ColumnVarNameInTable="columnTHANHTIEN" msprop:Generator_ColumnPropNameInRow="THANHTIEN" msprop:Generator_ColumnPropNameInTable="THANHTIENColumn" msprop:Generator_UserColumnName="THANHTIEN" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NGAYCHOT" msprop:Generator_ColumnVarNameInTable="columnNGAYCHOT" msprop:Generator_ColumnPropNameInRow="NGAYCHOT" msprop:Generator_ColumnPropNameInTable="NGAYCHOTColumn" msprop:Generator_UserColumnName="NGAYCHOT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CHISONUOC" msprop:Generator_ColumnVarNameInTable="columnCHISONUOC" msprop:Generator_ColumnPropNameInRow="CHISONUOC" msprop:Generator_ColumnPropNameInTable="CHISONUOCColumn" msprop:Generator_UserColumnName="CHISONUOC" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CTHDN" />
+      <xs:field xpath="mstns:MACH" />
+      <xs:field xpath="mstns:MAHDNUOC" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

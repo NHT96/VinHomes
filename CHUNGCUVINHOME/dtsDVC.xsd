@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsDVC" targetNamespace="http://tempuri.org/dtsDVC.xsd" xmlns:mstns="http://tempuri.org/dtsDVC.xsd" xmlns="http://tempuri.org/dtsDVC.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CCVINHOMEConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CCVINHOMEConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CHUNGCUVINHOME.Properties.Settings.GlobalReference.Default.CCVINHOMEConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CTHDDVCTableAdapter" GeneratorDataComponentClassName="CTHDDVCTableAdapter" Name="CTHDDVC" UserDataComponentName="CTHDDVCTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CCVINHOMEConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        c.MACH, c.MAHDDVC, d.NGAYTB, c.PHIANNINH, c.PHIMOITRUONG, c.PHIGIUXE, c.THANHTIEN
+FROM            DICHVUCONG AS d INNER JOIN
+                         CTHDDVC AS c ON d.MAHDDVC = c.MAHDDVC
+ORDER BY c.MACH</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MACH" DataSetColumn="MACH" />
+              <Mapping SourceColumn="MAHDDVC" DataSetColumn="MAHDDVC" />
+              <Mapping SourceColumn="PHIANNINH" DataSetColumn="PHIANNINH" />
+              <Mapping SourceColumn="PHIMOITRUONG" DataSetColumn="PHIMOITRUONG" />
+              <Mapping SourceColumn="PHIGIUXE" DataSetColumn="PHIGIUXE" />
+              <Mapping SourceColumn="THANHTIEN" DataSetColumn="THANHTIEN" />
+              <Mapping SourceColumn="NGAYTB" DataSetColumn="NGAYTB" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsDVC" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtsDVC" msprop:Generator_UserDSName="dtsDVC">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CTHDDVC" msprop:Generator_TableClassName="CTHDDVCDataTable" msprop:Generator_TableVarName="tableCTHDDVC" msprop:Generator_TablePropName="CTHDDVC" msprop:Generator_RowDeletingName="CTHDDVCRowDeleting" msprop:Generator_RowChangingName="CTHDDVCRowChanging" msprop:Generator_RowEvHandlerName="CTHDDVCRowChangeEventHandler" msprop:Generator_RowDeletedName="CTHDDVCRowDeleted" msprop:Generator_UserTableName="CTHDDVC" msprop:Generator_RowChangedName="CTHDDVCRowChanged" msprop:Generator_RowEvArgName="CTHDDVCRowChangeEvent" msprop:Generator_RowClassName="CTHDDVCRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MACH" msprop:Generator_ColumnVarNameInTable="columnMACH" msprop:Generator_ColumnPropNameInRow="MACH" msprop:Generator_ColumnPropNameInTable="MACHColumn" msprop:Generator_UserColumnName="MACH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MAHDDVC" msprop:Generator_ColumnVarNameInTable="columnMAHDDVC" msprop:Generator_ColumnPropNameInRow="MAHDDVC" msprop:Generator_ColumnPropNameInTable="MAHDDVCColumn" msprop:Generator_UserColumnName="MAHDDVC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PHIANNINH" msprop:Generator_ColumnVarNameInTable="columnPHIANNINH" msprop:Generator_ColumnPropNameInRow="PHIANNINH" msprop:Generator_ColumnPropNameInTable="PHIANNINHColumn" msprop:Generator_UserColumnName="PHIANNINH" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PHIMOITRUONG" msprop:Generator_ColumnVarNameInTable="columnPHIMOITRUONG" msprop:Generator_ColumnPropNameInRow="PHIMOITRUONG" msprop:Generator_ColumnPropNameInTable="PHIMOITRUONGColumn" msprop:Generator_UserColumnName="PHIMOITRUONG" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PHIGIUXE" msprop:Generator_ColumnVarNameInTable="columnPHIGIUXE" msprop:Generator_ColumnPropNameInRow="PHIGIUXE" msprop:Generator_ColumnPropNameInTable="PHIGIUXEColumn" msprop:Generator_UserColumnName="PHIGIUXE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="THANHTIEN" msprop:Generator_ColumnVarNameInTable="columnTHANHTIEN" msprop:Generator_ColumnPropNameInRow="THANHTIEN" msprop:Generator_ColumnPropNameInTable="THANHTIENColumn" msprop:Generator_UserColumnName="THANHTIEN" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NGAYTB" msprop:Generator_ColumnVarNameInTable="columnNGAYTB" msprop:Generator_ColumnPropNameInRow="NGAYTB" msprop:Generator_ColumnPropNameInTable="NGAYTBColumn" msprop:Generator_UserColumnName="NGAYTB" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CTHDDVC" />
+      <xs:field xpath="mstns:MACH" />
+      <xs:field xpath="mstns:MAHDDVC" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

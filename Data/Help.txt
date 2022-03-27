@@ -1,0 +1,7 @@
+* Để tránh gây ra lỗi phần mềm. Bạn vui lòng thực hiện như hướng dẫn.
+- Trước khi khởi động phần mềm vui lòng truy cập vào thư mục cài đặt của ứng dụng.
+B1: Mở sql sever
+B2: Mở thư mục data trong thư mục cài đặt tìm file ccvh.sql
+B3: Mở file ccvh.sql bằng sql sever
+B4: Dùng tổ hợp phím Ctrl + A sau đó bấm F5
+B5: Đóng sql sever và khởi động ứng dụng
